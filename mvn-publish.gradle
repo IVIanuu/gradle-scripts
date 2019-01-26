@@ -92,5 +92,7 @@ bintray {
         version {
             name = versionToUse
         }
+
+        publish = true
     }
 }
