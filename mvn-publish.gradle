@@ -80,15 +80,15 @@ bintray {
     override = true
 
     pkg {
-        repo = Publishing.repo
+        repo = 'maven'
         name = project.name
-        userOrg = Publishing.userOrg
-        licenses = Publishing.licences
+        userOrg = 'ivianuu'
+        licenses = ['Apache-2.0']
         vcsUrl = Publishing.vcsUrl
-        websiteUrl = Publishing.websiteUrl
-        issueTrackerUrl = Publishing.issueTrackerUrl
+        websiteUrl = Publishing.vcsUrl
+        issueTrackerUrl = "$Publishing.vcsUrl/issues"
 
-        githubRepo = Publishing.githubRepo
+        githubRepo = Publishing.vcsUrl.replace("https://github.com/", "")
         version {
             name = versionToUse
         }
