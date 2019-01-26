@@ -30,6 +30,8 @@ def gitHash = { ->
     return stdout.toString().trim().substring(0, 10)
 }
 
+def isAndroid = project.hasProperty('android')
+
 def versionToUse = Publishing.version
 
 if (versionToUse == 'git') {
@@ -41,8 +43,16 @@ version = versionToUse
 
 install {
     repositories.mavenInstaller {
-        pom.groupId = Publishing.groupId
-        pom.artifactId = project.name
+        pom {
+            project {
+                groupId = Publishing.groupId
+                artifactId = project.name
+
+                if (isAndroid) {
+                    packaging 'aar'
+                }
+            }
+        }
         version = versionToUse
     }
     doLast() {
@@ -53,6 +63,9 @@ install {
 publishing {
     publications {
         MyPublication(MavenPublication) {
+            if (isAndroid) {
+                pom.setPackaging('aar')
+            }
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
                 // Iterate over the implementation dependencies (we don't want the test ones), adding a <dependency> node for each
