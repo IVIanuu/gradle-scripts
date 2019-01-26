@@ -30,17 +30,23 @@ def gitHash = { ->
     return stdout.toString().trim().substring(0, 10)
 }
 
+def versionToUse = Publishing.version
+
+if (versionToUse == 'git') {
+    versionToUse = gitHash()
+}
+
 group = Publishing.groupId
-version = gitHash()
+version = versionToUse
 
 install {
     repositories.mavenInstaller {
         pom.groupId = Publishing.groupId
         pom.artifactId = project.name
-        version=gitHash()
+        version = versionToUse
     }
     doLast() {
-        println "Published: ${Publishing.groupId}:${project.name}:${gitHash()}"
+        println "Published: ${Publishing.groupId}:${project.name}:${versionToUse}"
     }
 }
 
@@ -70,11 +76,21 @@ bintray {
 
     configurations = ['archives']
     publications = ['MyPublication']
+
+    override = true
+
     pkg {
-        repo = 'maven'
+        repo = Publishing.repo
         name = project.name
-        licenses = ['Apache-2.0']
-        vcsUrl = ''
-        publish = true
+        userOrg = Publishing.userOrg
+        licenses = Publishing.licences
+        vcsUrl = Publishing.vcsUrl
+        websiteUrl = Publishing.websiteUrl
+        issueTrackerUrl = Publishing.issueTrackerUrl
+
+        githubRepo = Publishing.githubRepo
+        version {
+            name = versionToUse
+        }
     }
 }
