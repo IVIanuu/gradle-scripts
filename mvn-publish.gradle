@@ -104,6 +104,7 @@ bintray {
         githubRepo = Publishing.vcsUrl.replace("https://github.com/", "")
         version {
             name = versionToUse
+            released  = new Date()
         }
 
         publish = true
