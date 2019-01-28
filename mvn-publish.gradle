@@ -21,22 +21,9 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 apply from: "https://raw.githubusercontent.com/IVIanuu/gradle-scripts/master/mvn-sources.gradle"
 
-def gitHash = { ->
-    def stdout = new ByteArrayOutputStream()
-    exec {
-        commandLine 'git', 'rev-parse', 'HEAD'
-        standardOutput = stdout
-    }
-    return stdout.toString().trim().substring(0, 10)
-}
-
 def isAndroid = project.hasProperty('android')
 
 def versionToUse = Publishing.version
-
-if (versionToUse == 'git') {
-    versionToUse = gitHash()
-}
 
 group = Publishing.groupId
 version = versionToUse
