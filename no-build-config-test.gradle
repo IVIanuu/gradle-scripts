@@ -1,4 +1,0 @@
-afterEvaluate {
-    generateDebugBuildConfig.enabled = false
-    generateReleaseBuildConfig.enabled = false
-}
