@@ -1,5 +1,7 @@
 android {
-   libraryVariants.all {
-       it.generateBuildConfig.enabled = false
-   }
+    afterEvaluate {
+        libraryVariants.all {
+            it.generateBuildConfig.enabled = false
+        }
+    }
 }
