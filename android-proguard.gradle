@@ -1,7 +1,9 @@
-buildTypes {
-    release {
-        minifyEnabled true
-        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
-        shrinkResources true
+android {
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
+            shrinkResources true
+        }
     }
 }
