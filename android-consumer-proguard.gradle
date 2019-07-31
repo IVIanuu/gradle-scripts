@@ -1,5 +1,5 @@
 android {
     defaultConfig {
-        consumerProguardFiles 'proguard-rules.txt'
+        consumerProguardFiles 'proguard-rules.pro'
     }
 }
