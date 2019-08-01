@@ -1,5 +1,9 @@
 android {
-  sourceSets {
-    main.java.srcDirs += 'src/main/kotlin'
-  }
+    sourceSets {
+        main.java.srcDirs += 'src/debug/kotlin'
+        main.java.srcDirs += 'src/main/kotlin'
+        main.java.srcDirs += 'src/release/kotlin'
+        main.java.srcDirs += 'src/androidTest/kotlin'
+        main.java.srcDirs += 'src/test/kotlin'
+    }
 }
