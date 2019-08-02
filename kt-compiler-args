@@ -1,0 +1,25 @@
+afterEvaluate {
+    tasks
+            .matching {
+                it.class.canonicalName == 'org.jetbrains.kotlin.gradle.tasks.KotlinCompile' ||
+                        it.class.superclass.canonicalName == 'org.jetbrains.kotlin.gradle.tasks.KotlinCompile'
+            }
+            .forEach {
+                it.kotlinOptions.freeCompilerArgs += [
+                        "-Xjsr305=strict",
+                        "-progressive",
+                        "-XXLanguage:+NewInference",
+                        "-XXLanguage:+SamConversionForKotlinFunctions",
+                        "-XXLanguage:+InlineClasses",
+                        "-Xuse-experimental=kotlin.Experimental",
+                        "-Xuse-experimental=kotlin.ExperimentalStdlibApi",
+                        "-Xuse-experimental=kotlin.ExperimentalUnsignedTypes",
+                        "-Xuse-experimental=kotlin.experimental.ExperimentalTypeInference",
+                        "-Xuse-experimental=kotlin.contracts.ExperimentalContracts",
+                        "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                        "-Xuse-experimental=kotlinx.coroutines.FlowPreview",
+                        "-Xuse-experimental=kotlinx.coroutines.InternalCoroutinesApi",
+                        "-Xuse-experimental=kotlinx.coroutines.ObsoleteCoroutinesApi"
+                ]
+            }
+}
