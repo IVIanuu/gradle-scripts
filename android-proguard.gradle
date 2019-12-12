@@ -2,7 +2,7 @@ android {
     buildTypes {
         release {
             postprocessing {
-                proguardFiles("proguard-android-optimize.txt", "proguard-rules.txt")
+                proguardFiles("proguard-android-optimize.txt", "proguard-rules.txt", "proguard-android-optimize.pro", "proguard-rules.pro")
                 optimizeCode = true
                 obfuscate = true
                 removeUnusedCode = true
