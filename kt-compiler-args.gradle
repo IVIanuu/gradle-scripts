@@ -21,6 +21,7 @@ afterEvaluate {
                         "-Xuse-experimental=kotlinx.coroutines.FlowPreview",
                         "-Xuse-experimental=kotlinx.coroutines.InternalCoroutinesApi",
                         "-Xuse-experimental=kotlinx.coroutines.ObsoleteCoroutinesApi",
+                        "-Xuse-experimental=kotlinx.serialization.UnstableDefault",
                         "-Xuse-experimental=kotlinx.serialization.ImplicitReflectionSerializer"
                         ]
             }
