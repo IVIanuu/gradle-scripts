@@ -8,7 +8,6 @@ afterEvaluate {
                 it.kotlinOptions.freeCompilerArgs += [
                         "-Xjsr305=strict",
                         "-progressive",
-                        "-XXLanguage:+NewInference",
                         "-XXLanguage:+SamConversionForKotlinFunctions",
                         "-XXLanguage:+InlineClasses",
                         "-Xuse-experimental=kotlin.Experimental",
