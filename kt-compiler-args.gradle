@@ -14,7 +14,7 @@ afterEvaluate {
                         "-Xuse-experimental=kotlin.Experimental",
                         "-Xuse-experimental=kotlin.ExperimentalStdlibApi",
                         "-Xuse-experimental=kotlin.ExperimentalUnsignedTypes",
-                        "-Xuse-experimental=kotlin.experimental.ExperimentalTypeInference",
+   //                     "-Xuse-experimental=kotlin.experimental.ExperimentalTypeInference",
                         "-Xuse-experimental=kotlin.contracts.ExperimentalContracts",
                         "-Xuse-experimental=kotlin.time.ExperimentalTime",
                         "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi",
