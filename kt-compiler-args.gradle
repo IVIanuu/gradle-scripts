@@ -22,7 +22,9 @@ afterEvaluate {
                         "-Xuse-experimental=kotlinx.coroutines.InternalCoroutinesApi",
                         "-Xuse-experimental=kotlinx.coroutines.ObsoleteCoroutinesApi",
                         "-Xuse-experimental=kotlinx.serialization.UnstableDefault",
-                        "-Xuse-experimental=kotlinx.serialization.ImplicitReflectionSerializer"
+                        "-Xuse-experimental=kotlinx.serialization.ImplicitReflectionSerializer",
+                        "-Xskip-metadata-version-check",
+                        "-Xallow-jvm-ir-dependencies"
                         ]
             }
 }
