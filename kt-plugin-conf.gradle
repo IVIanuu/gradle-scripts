@@ -16,16 +16,18 @@
 
 Configuration kotlinPluginConf = configurations.create("kotlinPlugin")
 
-tasks
-        .matching {
-            it.class.canonicalName == 'org.jetbrains.kotlin.gradle.tasks.KotlinCompile' ||
-                    it.class.superclass.canonicalName == 'org.jetbrains.kotlin.gradle.tasks.KotlinCompile'
-        }
-        .forEach { compile ->
-            compile.dependsOn(kotlinPluginConf)
-            compile.doFirst {
-                kotlinPluginConf.files.forEach { file ->
-                    compile.kotlinOptions.freeCompilerArgs += "-Xplugin=$file"
+project.afterEvaluate {
+    tasks
+            .matching {
+                it.class.canonicalName == 'org.jetbrains.kotlin.gradle.tasks.KotlinCompile' ||
+                        it.class.superclass.canonicalName == 'org.jetbrains.kotlin.gradle.tasks.KotlinCompile'
+            }
+            .forEach { compile ->
+                compile.dependsOn(kotlinPluginConf)
+                compile.doFirst {
+                    kotlinPluginConf.files.forEach { file ->
+                        compile.kotlinOptions.freeCompilerArgs += "-Xplugin=$file"
+                    }
                 }
             }
-        }
+}
