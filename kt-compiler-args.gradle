@@ -24,8 +24,7 @@ afterEvaluate {
                         "-Xuse-experimental=kotlinx.serialization.UnstableDefault",
                         "-Xuse-experimental=kotlinx.serialization.ImplicitReflectionSerializer",
                         "-Xskip-metadata-version-check",
-                        "-Xallow-jvm-ir-dependencies",
-                        "-Xemit-jvm-type-annotations"
+                        "-Xallow-jvm-ir-dependencies"
                         ]
             }
 }
