@@ -15,14 +15,14 @@
  */
 
 android {
-    compileSdkVersion(Build.CompileSdk)
+    compileSdkVersion(Build.compileSdk)
 
     defaultConfig {
-        applicationId = Build.ApplicationId
-        buildToolsVersion = Build.BuildToolsVersion
-        minSdkVersion(Build.MinSdk)
-        targetSdkVersion(Build.TargetSdk)
-        versionCode = Build.VersionCode
-        versionName = Build.VersionName
+        applicationId = Build.applicationId
+        buildToolsVersion = Build.buildToolsVersion
+        minSdkVersion(Build.minSdk)
+        targetSdkVersion(Build.targetSdk)
+        versionCode = Build.versionCode
+        versionName = Build.versionName
     }
 }
