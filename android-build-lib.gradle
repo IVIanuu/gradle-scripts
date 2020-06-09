@@ -15,11 +15,11 @@
  */
 
 android {
-    compileSdkVersion(Build.compileSdk)
+    compileSdkVersion(Build.CompileSdk)
 
     defaultConfig {
-        buildToolsVersion = Build.buildToolsVersion
-        minSdkVersion(Build.minSdk)
-        targetSdkVersion(Build.targetSdk)
+        buildToolsVersion = Build.BuildToolsVersion
+        minSdkVersion(Build.MinSdk)
+        targetSdkVersion(Build.TargetSdk)
     }
 }
