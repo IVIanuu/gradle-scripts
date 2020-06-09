@@ -24,16 +24,16 @@ apply from: "https://raw.githubusercontent.com/IVIanuu/gradle-scripts/master/mvn
 
 def isAndroid = project.hasProperty('android')
 
-def versionToUse = Publishing.Version
+def versionToUse = Publishing.version
 
-group = Publishing.GroupId
+group = Publishing.groupId
 version = versionToUse
 
 install {
     repositories.mavenInstaller {
         pom {
             project {
-                groupId = Publishing.GroupId
+                groupId = Publishing.groupId
                 artifactId = project.name
 
                 if (isAndroid) {
@@ -44,7 +44,7 @@ install {
         version = versionToUse
     }
     doLast() {
-        println "Published: ${Publishing.GroupId}:${project.name}:${versionToUse}"
+        println "Published: ${Publishing.groupId}:${project.name}:${versionToUse}"
     }
 }
 
@@ -83,11 +83,11 @@ bintray {
         name = project.name
         userOrg = 'ivianuu'
         licenses = ['Apache-2.0']
-        vcsUrl = Publishing.VcsUrl
-        websiteUrl = Publishing.VcsUrl
-        issueTrackerUrl = "$Publishing.VcsUrl/issues"
+        vcsUrl = Publishing.vcsUrl
+        websiteUrl = Publishing.vcsUrl
+        issueTrackerUrl = "$Publishing.vcsUrl/issues"
 
-        githubRepo = Publishing.VcsUrl.replace("https://github.com/", "")
+        githubRepo = Publishing.vcsUrl.replace("https://github.com/", "")
         version {
             name = versionToUse
         }
