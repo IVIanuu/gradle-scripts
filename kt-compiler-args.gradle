@@ -24,6 +24,7 @@ afterEvaluate {
                         "-Xuse-experimental=kotlinx.serialization.UnstableDefault",
                         "-Xuse-experimental=kotlinx.serialization.ImplicitReflectionSerializer",
                         "-Xuse-experimental=androidx.compose.ExperimentalComposeApi",
+                        "-Xuse-experimental=org.jetbrains.kotlin.ir.ObsoleteDescriptorBasedAPI",
                         "-Xskip-metadata-version-check",
                         "-Xallow-jvm-ir-dependencies",
                         "-Xjvm-default=enable"
