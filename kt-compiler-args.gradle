@@ -6,10 +6,6 @@ afterEvaluate {
             }
             .forEach {
                 it.kotlinOptions.freeCompilerArgs += [
-                        "-Xjsr305=strict",
-                        "-progressive",
-                        "-XXLanguage:+SamConversionForKotlinFunctions",
-                        "-XXLanguage:+InlineClasses",
                         "-XXLanguage:+NewInference",
                         "-Xuse-experimental=kotlin.Experimental",
                         "-Xuse-experimental=kotlin.ExperimentalStdlibApi",
@@ -27,7 +23,6 @@ afterEvaluate {
                         "-Xuse-experimental=org.jetbrains.kotlin.ir.ObsoleteDescriptorBasedAPI",
                         "-Xskip-metadata-version-check",
                         "-Xallow-jvm-ir-dependencies",
-                        "-Xjvm-default=enable"
                         ]
             }
 }
