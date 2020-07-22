@@ -21,7 +21,7 @@ afterEvaluate {
                         "-Xuse-experimental=kotlinx.serialization.ImplicitReflectionSerializer",
                         "-Xuse-experimental=androidx.compose.ExperimentalComposeApi",
                         "-Xuse-experimental=org.jetbrains.kotlin.ir.ObsoleteDescriptorBasedAPI",
-                        "-Xskip-metadata-version-check",
+                        "-Xskip-prerelease-check",
                         "-Xallow-jvm-ir-dependencies",
                         ]
             }
