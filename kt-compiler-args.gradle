@@ -22,6 +22,7 @@ afterEvaluate {
                         "-Xuse-experimental=androidx.compose.ExperimentalComposeApi",
                         "-Xuse-experimental=org.jetbrains.kotlin.ir.ObsoleteDescriptorBasedAPI",
                         "-Xuse-experimental=androidx.compose.runtime.ExperimentalComposeApi",
+                        "-Xuse-experimental=androidx.compose.ui.focus.ExperimentalFocus",
                         "-Xskip-prerelease-check",
                         "-Xallow-jvm-ir-dependencies",
                         ]
