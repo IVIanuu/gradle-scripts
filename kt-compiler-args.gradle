@@ -26,6 +26,7 @@ afterEvaluate {
                         "-Xuse-experimental=androidx.compose.foundation.ExperimentalFoundationApi",
                         "-Xskip-prerelease-check",
                         "-Xallow-jvm-ir-dependencies",
+                        "-Xjvm-default"
                         ]
             }
 }
