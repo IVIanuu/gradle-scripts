@@ -1,9 +1,9 @@
 android {
-    java {
+    compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    
+  
     afterEvaluate {
         tasks
                 .matching {
