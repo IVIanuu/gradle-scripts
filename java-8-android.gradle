@@ -3,13 +3,4 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-  
-    afterEvaluate {
-        tasks
-                .matching {
-                    it.class.canonicalName == 'org.jetbrains.kotlin.gradle.tasks.KotlinCompile' ||
-                            it.class.superclass.canonicalName == 'org.jetbrains.kotlin.gradle.tasks.KotlinCompile'
-                }
-                .forEach { it.kotlinOptions.jvmTarget = '1.8' }
-    }
 }
