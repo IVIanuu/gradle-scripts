@@ -1,11 +1,2 @@
 sourceCompatibility = "1.8"
 targetCompatibility = "1.8"
-
-afterEvaluate {
-        tasks
-                .matching {
-                    it.class.canonicalName == 'org.jetbrains.kotlin.gradle.tasks.KotlinCompile' ||
-                            it.class.superclass.canonicalName == 'org.jetbrains.kotlin.gradle.tasks.KotlinCompile'
-                }
-                .forEach { it.kotlinOptions.jvmTarget = '1.8' }
-    }
