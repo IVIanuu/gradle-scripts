@@ -6,7 +6,6 @@ afterEvaluate {
             }
             .forEach {
                 it.kotlinOptions.freeCompilerArgs += [
-                        "-Werror",
                         "-Xuse-ir",
                         "-Xskip-runtime-version-check",
                         "-XXLanguage:+NewInference",
