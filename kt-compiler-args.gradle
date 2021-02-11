@@ -27,6 +27,7 @@ afterEvaluate {
                         "-Xuse-experimental=androidx.compose.ui.focus.ExperimentalFocus",                        
                         "-Xuse-experimental=androidx.compose.foundation.ExperimentalFoundationApi",
                         "-Xuse-experimental=androidx.compose.material.ExperimentalMaterialApi",
+                        "-Xuse-experimental=androidx.compose.runtime.InternalComposeApi",
                         "-Xskip-prerelease-check",
                         "-Xallow-jvm-ir-dependencies",
                         "-Xjvm-default=enable",
