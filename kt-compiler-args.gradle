@@ -28,6 +28,7 @@ afterEvaluate {
                         "-Xuse-experimental=androidx.compose.foundation.ExperimentalFoundationApi",
                         "-Xuse-experimental=androidx.compose.material.ExperimentalMaterialApi",
                         "-Xuse-experimental=androidx.compose.runtime.InternalComposeApi",
+                        "-Xuse-experimental=androidx.compose.animation.ExperimentalAnimationApi",
                         "-Xskip-prerelease-check",
                         "-Xallow-jvm-ir-dependencies",
                         "-Xjvm-default=enable",
