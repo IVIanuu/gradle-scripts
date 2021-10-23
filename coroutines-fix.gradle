@@ -1,0 +1,5 @@
+android {
+    packagingOptions {
+        pickFirst("META-INF/atomicfu.kotlin_module")
+    }
+}
