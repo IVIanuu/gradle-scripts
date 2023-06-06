@@ -31,7 +31,6 @@ afterEvaluate {
                         "-Xuse-experimental=androidx.compose.animation.ExperimentalAnimationApi",
                         "-Xskip-prerelease-check",
                         "-Xallow-jvm-ir-dependencies",
-                        "-Xjvm-default=enable",
                         "-jvm-target", "1.8"
                         ]
             }
